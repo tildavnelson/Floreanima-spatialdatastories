@@ -1,16 +1,28 @@
-# React + Vite
+# Flore Anima 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Flore Anima is an interactive animation website built with React and Vite that visualises the natural patterns of plants and fungi through the months in France.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What is it?
+The main page displays 12 animated tiles showing the top 12 plant and fungi species photographed and submitted to iNaturalist in France throughout the months of the year. Each tile cycles through real observation photographs, creating a living, patterned animation of the French landscape.
 
-## React Compiler
+![Screenshot 2026-02-23 144908](https://github.com/user-attachments/assets/885d047e-c22b-46e1-9647-3757e6c6aa49)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Using the slider at the bottom you can move through the months of the year, watching the species and colours of the landscape shift with the seasons.
 
-## Expanding the ESLint configuration
+Clicking on a tile opens a full viewer that animates through all available photographs of that species for that month, creating a patterned portrait of a single species in its seasonal context.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![Screenshot 2026-02-23 144753](https://github.com/user-attachments/assets/80647841-f420-436e-a2e6-2ead9bb208d7)
+
+
+## Data
+All observation data and photographs are sourced live from the iNaturalist API — a citizen science platform where people submit wildlife observations from around the world. iNaturalist can be found at www.inaturalist.org.
+The API is queried using the following parameters:
+
+Location: France (place_id: 6753)
+
+Taxa: Plantae and Fungi
+
+Ranked by: number of observations with photographs for the selected month
+
+Ordered by: most voted observations first
